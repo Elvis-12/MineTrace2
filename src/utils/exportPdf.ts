@@ -1,0 +1,22 @@
+import jsPDF from 'jspdf';
+import autoTable from 'jspdf-autotable';
+
+export const exportToPdf = (title: string, columns: string[], data: any[][], filename: string) => {
+  const doc = new jsPDF();
+  
+  doc.setFontSize(18);
+  doc.text(title, 14, 22);
+  doc.setFontSize(11);
+  doc.setTextColor(100);
+  doc.text(`Generated on: ${new Date().toLocaleString()}`, 14, 30);
+
+  autoTable(doc, {
+    startY: 36,
+    head: [columns],
+    body: data,
+    theme: 'grid',
+    headStyles: { fillColor: [30, 58, 95] }, // #1e3a5f
+  });
+
+  doc.save(`${filename}.pdf`);
+};

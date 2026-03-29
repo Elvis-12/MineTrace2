@@ -1,0 +1,5 @@
+{
+  "name": "MineTrace",
+  "description": "A comprehensive mineral supply chain tracking and verification platform.",
+  "requestFramePermissions": ["camera"]
+}

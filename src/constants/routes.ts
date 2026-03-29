@@ -1,0 +1,17 @@
+export const ROUTES = {
+  LOGIN: '/login',
+  DASHBOARD: '/dashboard',
+  USERS: '/users',
+  ORGANIZATIONS: '/organizations',
+  MINES: '/mines',
+  BATCHES: '/batches',
+  BATCH_DETAIL: (id: string) => `/batches/${id}`,
+  MOVEMENTS: '/movements',
+  VERIFICATION: '/verification',
+  FRAUD: '/fraud',
+  REPORTS: '/reports',
+  NOTIFICATIONS: '/notifications',
+  AUDIT_LOGS: '/audit-logs',
+  PROFILE: '/profile',
+  UNAUTHORIZED: '/unauthorized',
+};
